@@ -1,0 +1,62 @@
+/* CUSTOMIZE THE CAROUSEL
+-------------------------------------------------- */
+/* Carousel base class */
+
+/* Since positioning the image, we need to help out the caption */
+.carousel {
+  z-index: 7 !important;
+}
+
+.carousel-caption {
+  bottom: 4rem;
+  //top: 30% !important;
+}
+
+.carousel-caption h1 {
+  font-family: 'Montserrat SemiBold';
+  font-weight: normal;
+  font-size: 4rem;
+}
+
+.carousel-caption p {
+  font-family: 'Montserrat Regular';
+  font-weight: normal;
+}
+
+.carousel-caption i {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+/* Declare heights because of positioning of img element */
+.carousel-item {
+  height: 34rem;
+}
+
+.carousel-caption-link {
+  color: #ffffff;
+  font-size: 1.15rem;
+}
+
+a.carousel-caption-link:hover {
+  text-decoration: underline;
+}
+
+select {
+  background-color: rgba(255, 255, 255, .75);
+  display: list-item !important;
+  font-size: 17px !important;
+}
+
+.home-container {
+  background-image: url('/assets/images/carousel/bg1.jpg');
+  background-attachment: fixed;
+}
+
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+@media (max-width: 40em) {
+  .carousel-caption h1 {
+    font-size: 2rem !important;
+  }
+}

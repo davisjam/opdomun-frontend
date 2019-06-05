@@ -1,0 +1,41 @@
+.plan-title, .plan-title span {
+  color: #063543 !important;
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: 1rem;
+}
+
+.plan-title span {
+  font-size: .8rem;
+  font-weight: normal;
+}
+
+.op-basic {
+  line-height: 1.7rem;
+  font-size: 1.4rem;
+  font-weight: 400;
+  margin-bottom: 0;
+  font-family: "Montserrat SemiBold";
+}
+
+.basic-rooms span{
+  margin: auto 8px !important;
+}
+
+.detail span {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.basic-post-link {
+  color: #000000;
+}
+
+a.basic-post-link:hover {
+  color: #0071b2;
+}
+
+.card {
+  font-family: "Montserrat Regular";
+  font-size: .8rem;
+}

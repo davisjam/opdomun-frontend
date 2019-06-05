@@ -1,0 +1,67 @@
+h3 {
+  color: #ff9049;
+  text-transform: uppercase;
+  margin-top: 10px;
+  margin-bottom: 0px;
+  font-family: 'Montserrat SemiBold';
+  font-weight: normal;
+}
+
+.link a {
+  color: #03191f;
+  font-size: 15px;
+}
+
+.link {
+  margin-bottom: 10px !important;
+}
+
+select {
+  display: list-item !important;
+  font-size: 17px !important;
+}
+
+.agents-card {
+  margin-top: 10px;
+}
+
+.card-body {
+  padding-top: 5px;
+  padding-bottom: 15px;
+}
+
+.card-up {
+  background-color: #f0f0f0;
+}
+
+hr {
+  margin-top: 0px;
+  margin-bottom: .5rem;
+}
+
+button {
+  background-color: #e98e42;
+  color: #ffffff;
+  font-family: 'Montserrat SemiBold';
+}
+
+button:hover {
+  color: #ffffff;
+}
+
+.card-title {
+  font-size: .9rem;
+  font-family: 'Montserrat Medium';
+}
+
+.agent-detail {
+  font-size: .8rem;
+  font-family: 'Montserrat Light';
+}
+
+label {
+  float: left;
+  height: 35px;
+  padding-top: 8px;
+  margin-right: 10px;
+}

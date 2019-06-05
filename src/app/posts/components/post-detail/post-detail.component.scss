@@ -1,0 +1,45 @@
+form {
+  margin-top: 2rem;
+}
+
+.contact-form-col {
+  height: 4rem;
+}
+
+.md-form {
+  margin-top: .8rem;
+  margin-bottom: 0rem;
+}
+
+form i {
+  font-size: 1.3rem;
+}
+
+.carousel-item {
+  text-align: center !important;
+  padding-left: 50% !important;
+  padding-right: 50% !important;
+}
+
+ul.my-carousel-item {
+  clear: both;
+  float: left;
+  list-style: none;
+  padding: 0;
+  width: 100%;
+  margin: 0 15%;
+  position: relative;
+}
+
+ul.my-carousel-item li {
+  float: left;
+  margin: 5px;
+}
+
+.col-sm-6, .col-lg-6 {
+  border-bottom: 1px solid rgba(0,0,0,.1) !important;
+  padding-bottom: 5px !important;
+  padding-top: 5px !important;
+}
+
+

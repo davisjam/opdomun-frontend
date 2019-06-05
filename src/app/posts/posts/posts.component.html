@@ -1,0 +1,95 @@
+<ng-template #content let-modal>
+    <div class="modal-header">
+        <h4 class="modal-title">Buscar</h4>
+        <button type="button" class="btn btn-sm btn-outline-default waves-effect waves-light" title="Cerrar"
+                aria-label="Close" (click)="modal.dismiss()"
+                style="padding: 5px 10px;margin-top: 1px; margin-right: 1px;"> X
+        </button>
+    </div>
+    <div class="modal-body">
+        <div class="container">
+            <form class="row">
+                <div class="col-md-4 col-sm-12">
+                    <label for="inputProvincia">Provincia:</label>
+                    <select id="inputProvincia" name="provincia_id" [(ngModel)]="searchPost.provincia_id"
+                            class="form-control"
+                            (change)="getMunicipios()">
+                        <option value=null selected>Seleccione la provincia</option>
+                        <option *ngFor="let provincia of provincias" [value]="provincia.id">{{provincia.title}}</option>
+                    </select>
+                </div>
+                <div class="col-md-4 col-sm-12">
+                    <label for="inputMunicipio">Municipio:</label>
+                    <select id="inputMunicipio" name="municipio_id" [(ngModel)]="searchPost.municipio_id"
+                            class="form-control"
+                            (change)="getLocalidades()">
+                        <option value=null selected>Seleccione el municipio</option>
+                        <option *ngFor="let municipio of municipios" [value]="municipio.id">{{municipio.title}}</option>
+                    </select>
+                </div>
+                <div class="col-md-4 col-sm-12">
+                    <label for="inputLocalidad">Localidad:</label>
+                    <select id="inputLocalidad" name="localidad_id" [(ngModel)]="searchPost.localidad_id"
+                            class="form-control">
+                        <option value=null selected>Seleccione la localidad</option>
+                        <option *ngFor="let localidad of localidades" [value]="localidad.id">{{localidad.title}}
+                        </option>
+                    </select>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="mb-2 ">
+                        <label for="minprice">$ Minimo:</label>
+                        <input type="number" id="minprice" name="minprice" [(ngModel)]="searchPost.minPrice"
+                               class="form-control" placeholder="0.00">
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="mb-2 ">
+                        <label for="maxprice">$ Maximo:</label>
+                        <input type="number" id="maxprice" name="maxprice" [(ngModel)]="searchPost.maxPrice"
+                               class="form-control" placeholder="0.00">
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="mb-2 ">
+                        <label for="bedrooms"># Cuartos:</label>
+                        <input type="number" id="bedrooms" name="bedrooms" [(ngModel)]="searchPost.bedrooms"
+                               class="form-control" placeholder="0">
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="mb-2 ">
+                        <label for="bathrooms"># Baños:</label>
+                        <input type="number" id="bathrooms" name="bathrooms" [(ngModel)]="searchPost.bathrooms"
+                               class="form-control" placeholder="0">
+                    </div>
+                </div>
+                <div class="col-md-8"></div>
+                <div style="width: 100%; text-align: right;">
+                    <button type="button" class="btn btn-sm btn-grey waves-effect waves-light " (click)="modal.close()">
+                        CANCELAR
+                    </button>
+                    <button type="reset" class="btn btn-sm btn-warning waves-effect waves-light">LIMPIAR</button>
+                    <button type="button" class="btn btn-sm btn-default waves-effect waves-light" (click)="onSearch()">
+                        BUSCAR
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</ng-template>
+
+<div class="container-fluid" style="margin-top: 60px; padding: 20px">
+    <div class="row">
+        <app-premium-posts class="col-lg-8 premium-list" [posts]="posts.premiums" [pageLimit]="searchPost.pageLimit"
+                           (paginator)="onPremiumPageChange($event)">
+        </app-premium-posts>
+        <app-basic-posts class="col-lg-4 basic-list" [posts]="posts.basics" [pageLimit]="searchPost.pageLimit"
+                         (paginator)="onBasicPageChange($event)">
+        </app-basic-posts>
+    </div>
+
+    <a class="btn-floating primary-color waves-effect waves-light" (click)="toggleSearchForm(content)">
+        <i class="fas fa-search"></i>
+    </a>
+</div>

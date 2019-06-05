@@ -1,0 +1,60 @@
+.plan-title, .plan-title span {
+  color: #063543 !important;
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: 1rem;
+}
+
+.plan-title span {
+  font-size: .8rem;
+  font-weight: normal;
+}
+
+.op-premium {
+  font-weight: 600 !important;
+  margin-bottom: 0;
+}
+
+.post-detail {
+  cursor: pointer;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.post-detail a {
+  color: #000000;
+}
+
+.col-lg-4, .col-md-6 {
+  padding-left: 3px !important;
+  padding-right: 3px !important;
+  margin-bottom: 8px !important;
+}
+
+.card-title {
+  margin-bottom: 0rem;
+  font-family: "Montserrat SemiBold";
+}
+
+hr {
+  margin-top: .5rem;
+  margin-bottom: .5rem;
+}
+
+h4 span {
+  font-size: .8rem;
+  display: block;
+  text-align: right;
+  float: right;
+  margin-top: 9px;
+  font-family: "Montserrat Regular";
+}
+
+.card, .card p, ul {
+  font-family: "Montserrat Regular";
+  font-size: .8rem !important;
+}
+
+.basic-rooms span{
+  margin: auto 8px !important;
+}

@@ -1,0 +1,68 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h3>ESPECIALISTAS OPDOMUN</h3>
+        </div>
+    </div>
+    <div class="row link">
+        <div class="col-md-12">
+            <a routerLink="/be_one_of_us" title="Clic para saber más">¿Cómo puedo ser un especialista OPDOMUN?</a>
+        </div>
+    </div>
+
+    <form class="row">
+        <div class="form-group col-md-6" style="padding-left: 10px; padding-right: 10px;">
+            <!--<label for="selectProvincia">Provincia:</label>-->
+            <div class="select_provincia" style="width: 100%">
+                <select id="selectProvincia" (change)="onProvinciaChange()" name="provincia" style="width: 110%;"
+                        [(ngModel)]="provincia">
+                    <option value=null selected>Seleccione la provincia</option>
+                    <option *ngFor="let provincia of provincias" value="{{provincia.id}}">
+                        {{provincia.title}}
+                    </option>
+                </select>
+            </div>
+        </div>
+        <div class="col-md-6 text-right">
+            <h6 class="p-2">Total ({{agentes.total}})</h6>
+        </div>
+    </form>
+
+    <div class="row agents-card" *ngIf="agentes.total; else empty">
+        <div *ngFor="let agente of agentes.data" class="col-lg-3 col-md-4 col-sm-6 mb-4">
+            <!--Card-->
+            <div class="card testimonial-card">
+                <!--Bacground color-->
+                <div class="card-up lighten-1">
+                </div>
+                <!--Avatar-->
+                <div class="avatar mx-auto white">
+                    <img src="{{baseImagesUrl}}{{agente.picture}}" class="rounded-circle" height="100" width="100">
+                </div>
+                <div class="card-body">
+                    <!--Name-->
+                    <h5 class="card-title">{{agente.fullname}}</h5>
+                    <hr>
+                    <div class="text-left text-muted agent-detail">
+                        <div><i class="fas fa-envelope pr-2 "></i>{{agente.email}}</div>
+                        <div><i class="fas fa-phone pr-2 "></i>{{agente.telephone}}</div>
+                        <div><i class="fas fa-map-marker pr-2 "></i>
+                            <span *ngFor="let userProvincia of agente.userProvincias">
+                                {{userProvincia.provincia.cod}},
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--/.Card-->
+        </div>
+    </div>
+    <ng-template #empty>
+        <i class="font-small mb-4 text-muted">No hay especialistas que mostrar.</i>
+    </ng-template>
+    <ngb-pagination [collectionSize]="agentes.total" [(page)]="page" [pageSize]="pageLimit" [maxSize]="3"
+                    [rotate]="true"
+                    [ellipses]="false" [boundaryLinks]="true" class="d-flex justify-content-center my-4"
+                    (pageChange)="onPageChange()">
+    </ngb-pagination>
+</div>

@@ -1,0 +1,165 @@
+<div class="container-fluid my-4" style="padding-top: 20px" *ngIf="post">
+    <div class="row">
+        <div class="col-lg-7" [ngClass]="{'col-lg-12':post.images.length == 0}">
+            <!-- Card -->
+            <div class="card wider mb-3">
+                <!-- Card content -->
+                <div class="card-body card-body-cascade" style="font-size: .9rem">
+                    <!-- Title -->
+                    <a class="btn-floating btn-action ml-auto mr-2 mt-1 mdb-color lighten-3 waves-effect waves-light"
+                       style="float: right; background-color: #ff9049 !important;" title="Regresar"
+                       (click)="goBack()">
+                        <i class="fas fa-chevron-left"></i>
+                    </a>
+                    <h5 class="card-title">
+                        <span>
+                            {{post.localidad.municipio.provincia.cod}},
+                            {{post.localidad.municipio.title}},
+                            {{post.localidad.title}},
+                            {{post.address}} &nbsp;
+                            <!--<span *ngIf="post.plan == '1'; else basic_badge" class="badge badge-success">PREMIUM</span>
+                            <ng-template #basic_badge>
+                                <span class="badge badge-primary">BASICO</span>
+                            </ng-template>-->
+                        </span>
+                    </h5>
+
+                    <div class="row">
+                        <div class="col-sm-6 col-lg-6"><i class="img-opdo"></i><span>Indice Opdo: <strong>{{post.opdo}} Op</strong></span>
+                        </div>
+                        <div class="col-sm-6 col-lg-6"><i class="img-eval"></i>Evaluación: <strong>45500.15
+                            Ptos</strong></div>
+
+                        <div class="col-sm-6 col-lg-6"><i class="img-price"></i>Precio: <strong>{{post.price}}
+                            CUC</strong></div>
+                        <div class="col-sm-6 col-lg-6"><i class="img-area"></i>Area: <strong>{{post.area}} m2</strong>
+                        </div>
+
+                        <div class="col-sm-6 col-lg-6"><i class="img-homecategory"></i>Tipo vivienda:
+                            <strong>{{post.homeType.title}}</strong>
+                        </div>
+                        <div class="col-sm-6 col-lg-6"><i class="img-location"></i>Ubicación:
+                            <strong>
+                                {{post.localidad.municipio.provincia.cod}},
+                                {{post.localidad.municipio.title}}
+                            </strong>
+                        </div>
+
+                        <div class="col-sm-6 col-lg-6"><i class="img-bedroom"></i>Dormitorios:
+                            <strong>{{post.bedrooms}}</strong></div>
+                        <div class="col-sm-6 col-lg-6"><i class="img-bathroom"></i>Baños:
+                            <strong>{{post.bathrooms}}</strong></div>
+
+                        <div class="col-sm-6 col-lg-6"><i class="img-health"></i>Estado de conservación:
+                            <strong>{{post.build_status}}</strong>
+                        </div>
+                        <div class="col-sm-6 col-lg-6"><i class="img-dateofbuild"></i>Año de construcción:
+                            <strong>{{post.built_year}}</strong></div>
+                    </div>
+
+                    <br>
+                    <h6 style=":margin-top 1rem"><i class="img-places"></i>El inmueble cuenta además con:</h6>
+                    <p class="card-text">
+                        <span *ngFor="let place of post.postPlaces">{{place.title}} / </span>
+                    </p>
+                    <hr>
+                    <h6 style="margin-top: 1rem">Descripción:</h6>
+                    <p class="card-text">{{post.summary}}</p>
+
+
+                    <div class="card-header border-0 font-weight-bold d-flex justify-content-between mt-3">
+                        <p class="mr-4 mb-0">Datos de conctacto:</p>
+                    </div>
+                    <div class="row mt-3 px-1 text-md-left text-muted">
+                        <div class="col-md-5"><i class="img-user"></i> {{post.user.fullname}}</div>
+                        <div class="col-md-4"><i class="img-email"></i> {{post.user.email}}</div>
+                        <div class="col-md-3"><i class="img-phone"></i> {{post.user.telephone}}</div>
+                    </div>
+                    <div class="text-sm text-muted mt-4">
+                        <i class="fas fa-calendar prefix"></i> Anuncio publicado: {{post.published_at | date:'shortDate'}}
+                    </div>
+                </div>
+            </div>
+            <!-- Card -->
+            <!--<div class="card wider my-4" *ngIf="post">
+                <div class="card-body" id="contact">
+
+                    <p class="text-muted mt-3">* Puede contactar a través de los datos del especialista o
+                        llenando el
+                        siguiente formulario.</p>
+
+                    <form [formGroup]="formGroup" class="row text-left grey-text">
+                        &lt;!&ndash;Header&ndash;&gt;
+                        <div class="col-md-12">
+                            <h3>Contacto:</h3>
+                            <hr class="mt-2 mb-2">
+                        </div>
+
+                        <input name="postId" formControlName="postId" type="hidden">
+
+                        &lt;!&ndash;Body&ndash;&gt;
+                        <div class="col-md-12 contact-form-col">
+                            <div class="md-form">
+                                <i class="fas fa-user prefix grey-text"></i>
+                                <label for="contactForm-name">Su nombre:</label>
+                                <input id="contactForm-name" name="fullname" formControlName="fullname"
+                                       class="form-control validate required" type="text"
+                                       required>
+                            </div>
+                        </div>
+                        <div class="col-md-6 contact-form-col">
+                            <div class="md-form">
+                                <i class="fas fa-envelope prefix grey-text"></i>
+                                <label for="contactForm-email" data-error="Incorrecto" data-success="">Su
+                                    correo:</label>
+                                <input id="contactForm-email" name="email" formControlName="email"
+                                       class="form-control validate" type="email" required>
+                            </div>
+                        </div>
+                        <div class="col-md-6 contact-form-col">
+                            <div class="md-form">
+                                <i class="fas fa-phone prefix grey-text"></i>
+                                <label for="contactForm-phone" data-error="Incorrecto" data-success="">Su
+                                    teléfono:</label>
+                                <input id="contactForm-phone" name="telephone" formControlName="telephone"
+                                       class="form-control validate" type="text" required>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="md-form">
+                                <i class="fas fa-pencil prefix grey-text"></i>
+                                <label for="contactForm-mess" class="active">Mensage:</label>
+                                <textarea style="padding: 5px;" id="contactForm-mess" name="summary"
+                                          formControlName="summary" type="text"
+                                          rows="2" class="md-textarea"></textarea>
+                                &lt;!&ndash;{{post.localidad.municipio.provincia.cod}}, {{post.localidad.municipio.title}}, {{post.localidad.title}}, {{post.address}}&ndash;&gt;
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="md-form text-center">
+                                <button (click)="sendComment()"
+                                        [disabled]="formGroup.invalid"
+                                        class="btn btn-default waves-effect waves-light">
+                                    Enviar
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+            </div>-->
+        </div>
+        <div class="col-lg-5">
+            <ngb-carousel *ngIf="post.images.length > 0; else noimage"
+                          [showNavigationArrows]="showNavigationArrows"
+                          [showNavigationIndicators]="showNavigationIndicators" class="animated fadeIn">
+                <ng-template ngbSlide *ngFor="let image of post.images">
+                    <img src="{{baseImgUrl}}{{image.url}}" class="card-img-top">
+                </ng-template>
+            </ngb-carousel>
+            <ng-template #noimage>
+                <span class="text-muted">Nota: Este anuncio no posee imágenes.</span>
+            </ng-template>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,24 @@
+footer {
+  text-align: center;
+  padding: 0.8rem !important;
+}
+
+.home-color {
+  background: linear-gradient(180deg, #041f29, #031920) !important;
+}
+.normal-color {
+  background-color: #f4f4f4
+}
+
+a.btn-floating {
+  background-color: transparent !important;
+  border: 1px #ff9049 solid;
+}
+
+a.btn-floating i{
+  color: #ff9049 !important;
+}
+
+footer span, footer a {
+  line-height: 20px;
+}

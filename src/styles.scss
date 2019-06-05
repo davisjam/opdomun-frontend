@@ -1,0 +1,306 @@
+@font-face {
+  font-family: 'Fivo Sans Light';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Fivo Sans Light'), url('/assets/fonts/fivo-sans/FivoSans-Light.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Fivo Sans Bold';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Fivo Sans Bold'), url('/assets/fonts/fivo-sans/FivoSans-Bold.woff') format('woff');
+}
+
+
+@font-face {
+  font-family: 'Montserrat SemiBold';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Montserrat SemiBold'), url('/assets/fonts/montserrat/Montserrat-SemiBold.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Montserrat Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Montserrat Regular'), url('/assets/fonts/montserrat/Montserrat-Regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Montserrat Light';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Montserrat Light'), url('/assets/fonts/montserrat/Montserrat-Light.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Montserrat Medium';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Montserrat Medium'), url('/assets/fonts/montserrat/Montserrat-Medium.woff') format('woff');
+}
+
+body {
+  color: #000000;
+  background-color: #ffffff;
+  font-family: 'Montserrat Regular';
+  font-weight: normal;
+}
+
+h3 {
+  color: #ff9049;
+  font-family: 'Montserrat SemiBold';
+  font-weight: normal;
+}
+
+p {
+  line-height: 20px;
+  text-align: justify;
+}
+
+li {
+  line-height: 20px;
+  text-align: justify;
+}
+
+.carousel-control-next-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
+}
+
+.carousel-control-prev-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
+}
+
+/*
+* Icons
+*/
+.img-opdo {
+  width: 20px;
+  height: 20px;
+  background-image: url('/assets/images/icons/opdo.png');
+  background-size: contain;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 5px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.img-eval {
+  width: 20px;
+  height: 20px;
+  background-image: url('/assets/images/icons/eval.png');
+  background-size: contain;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 5px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.img-price {
+  width: 20px;
+  height: 20px;
+  background-image: url('/assets/images/icons/price.png');
+  background-size: contain;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 5px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.img-area {
+  width: 20px;
+  height: 20px;
+  background-image: url('/assets/images/icons/area.png');
+  background-size: contain;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 5px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.img-homecategory {
+  width: 20px;
+  height: 20px;
+  background-image: url('/assets/images/icons/home-category.png');
+  background-size: contain;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 5px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.img-location {
+  width: 20px;
+  height: 20px;
+  background-image: url('/assets/images/icons/location.png');
+  background-size: contain;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 5px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.img-bedroom {
+  width: 20px;
+  height: 20px;
+  background-image: url('/assets/images/icons/bedroom.png');
+  background-size: contain;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 5px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.img-bathroom {
+  width: 20px;
+  height: 20px;
+  background-image: url('/assets/images/icons/bathroom.png');
+  background-size: contain;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 5px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.img-dateofbuild {
+  width: 20px;
+  height: 20px;
+  background-image: url('/assets/images/icons/date.png');
+  background-size: contain;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 5px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.img-health {
+  width: 20px;
+  height: 20px;
+  background-image: url('/assets/images/icons/health.png');
+  background-size: contain;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 5px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.img-places {
+  width: 20px;
+  height: 20px;
+  background-image: url('/assets/images/icons/places.png');
+  background-size: contain;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 5px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.img-user {
+  width: 20px;
+  height: 20px;
+  background-image: url('/assets/images/icons/user.png');
+  background-size: contain;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 5px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.img-email {
+  width: 20px;
+  height: 20px;
+  background-image: url('/assets/images/icons/email.png');
+  background-size: contain;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 5px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.img-phone {
+  width: 20px;
+  height: 20px;
+  background-image: url('/assets/images/icons/phone.png');
+  background-size: contain;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 5px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+// Customs Select
+
+.select, .select_provincia {
+  border: 1px solid #d9d9d9;
+  border-radius: 18px;
+  -moz-border-radius: 18px;
+  -webkit-border-radius: 18px;
+  height: 40px;
+  overflow: hidden;
+  width: 240px;
+  position: relative;
+  background-color: #ffffff;
+}
+
+select {
+  background-color: #ffffff;
+  border: none;
+  font-size: .9rem !important;
+  height: 40px;
+  padding: 5px 5px 5px 10px;
+  width: 260px;
+}
+
+select:focus {
+  outline: none;
+}
+
+.select::after {
+  color: gray;
+  font-weight: bold;
+  content: "\02C5";
+  font-size: 1rem;
+  border-radius: 18px;
+  display: table-cell;
+  padding-top: 7px;
+  text-align: center;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 0;
+  right: 0px;
+  pointer-events: none;
+}
+
+.select_provincia::after {
+  color: #ffffff;
+  background-color: #ff9049;
+  content: "BUSCAR";
+  font-size: .7rem;
+  border-radius: 18px;
+  margin: 2px;
+  display: table-cell;
+  padding-top: 7px;
+  text-align: center;
+  width: 85px;
+  height: 34px;
+  position: absolute;
+  top: 0;
+  right: 0px;
+  pointer-events: none;
+}

@@ -1,0 +1,75 @@
+<div class="home-container">
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators pull-right">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="container">
+                    <div class="carousel-caption text-left">
+                        <h1>OPDOMUN</h1>
+                        <p class="text-left"><i class="fas fa-quote-left "></i>
+                            se apoya en una metodología científica para evaluar una casa de acuerdo a sus
+                            características y a las del entorno donde se encuentra emplazada
+                            <i class="fas fa-quote-right"></i>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="container">
+                    <div class="carousel-caption text-left">
+                        <h1>OPDOMUN</h1>
+                        <p class="text-left"><i class="fas fa-quote-left"></i>
+                            ordena las ofertas de casas de aceurdo al Índice Opdo, el cual representa el balance
+                            costo-beneficio de cada inmueble
+                            <i class="fas fa-quote-right"></i>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="container">
+                    <div class="carousel-caption text-left">
+                        <h1>OPDOMUN</h1>
+                        <p class="text-left"><i class="fas fa-quote-left"></i>
+                            es posible gracias a su equipo profesional, que trabaja con pasión para brindar la ayuda que
+                            usted necesita
+                            <i class="fas fa-quote-right"></i>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+
+    <div class="fixed-top" style="top: 20%; z-index: 8;">
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6" style="text-align: center">
+                <div class="form-group" style="padding: 20px">
+                    <div class="select_provincia" style="width: 100%">
+                        <select (change)="getPosts()" name="provincia"
+                                [(ngModel)]="provincia" style="width: 110%">
+                            <option value=null selected>Seleccione la provincia</option>
+                            <option *ngFor="let provincia of provincias" value="{{provincia.id}}">
+                                {{provincia.title}}
+                            </option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3"></div>
+        </div>
+    </div>
+</div>
